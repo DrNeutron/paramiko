@@ -2,6 +2,9 @@
 Changelog
 =========
 
+* :bug:`60` Improved the performance of compressed transport by using default
+  zlib compression level (which is 6) rather than the max level of 9 which is
+  very CPU intensive.
 * :bug:`546` Prevent explosions with non-UTF-8 compatible SFTP filenames by
   leveraging the ``errors='replace'`` functionality of Python's string
   encoding/decoding. Thanks to ``@larswirzenius`` for the report and Niklas B
